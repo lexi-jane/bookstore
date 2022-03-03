@@ -1,0 +1,59 @@
+﻿@page
+@model Bookstore.Pages.BuyModel
+@{
+}
+
+<div>
+    <a class="btn btn-primary" href="@Model.ReturnUrl">< Continue Shopping</a>
+</div>
+
+<br />
+<br />
+
+<h2>Your cart</h2>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Book</th>
+            <th>Quantity</th>
+            <th>Cost</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.cart.Items)
+        {
+            <tr>
+                <td>@x.Book.Title</td>
+                <td>@x.Quantity</td>
+                <td>$@x.Book.Price</td>
+                <td>@((x.Quantity * x.Book.Price).ToString("c"))</td>
+
+                <td class="text-center">
+                    <form method="post" asp-page-handler="Remove">
+                        <input type="hidden" name="bookId" value="@x.Book.BookId" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total:</td>
+            <td colspan="3">@Model.cart.CalculateTotal().ToString("c")</td>
+
+        </tr>
+    </tfoot>
+</table>
+
+<div>
+    @*<a class="btn btn-primary" href="@Model.ReturnUrl">Proceed to Checkout</a>*@
+    <a class="btn btn-primary" asp-controller="Checkout" asp-action="Checkout" >Proceed to Checkout</a>
+
+</div>
+
