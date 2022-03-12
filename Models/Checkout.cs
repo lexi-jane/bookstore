@@ -41,5 +41,7 @@ namespace Bookstore.Models
         [Required(ErrorMessage = "Phone is Required")]
         public string Phone { get; set; }
 
+        [BindNever]
+        public bool OrderShipped { get; set; }
     }
 }

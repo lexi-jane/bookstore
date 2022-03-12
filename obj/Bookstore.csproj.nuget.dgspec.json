@@ -14,7 +14,7 @@
         "outputPath": "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alexisjane/.config/NuGet/NuGet.Config"
+          "/Users/alexisjane/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
