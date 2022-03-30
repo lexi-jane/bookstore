@@ -79,9 +79,9 @@
 @code {
 
     [Parameter]
-    public long Id { get; set; } = 0;
-    public string ThemeColor => Id == 0 ? "primary" : "warning";
-    public string TitleText => Id == 0 ? "Create" : "Edit";
+    public long id { get; set; } = 0;
+    public string ThemeColor => id == 0 ? "primary" : "warning";
+    public string TitleText => id == 0 ? "Create" : "Edit";
 
     public Book b { get; set; } = new Book();
 
@@ -89,15 +89,15 @@
 
     protected override void OnParametersSet()
     {
-        if (Id != 0) // existing project
+        if (id != 0) // existing project
         {
-            b = repo.Books.FirstOrDefault(x => x.BookId == Id);
+            b = repo.Books.FirstOrDefault(x => x.BookId == id);
         }
     }
 
     public void SaveBook()
     {
-        if (Id == 0) //New Project
+        if (id == 0) //New Project
         {
             repo.CreateBook(b);
         }

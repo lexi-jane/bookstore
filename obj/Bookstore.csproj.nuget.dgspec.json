@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Bookstore.csproj": {}
+    "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Bookstore.csproj": {}
   },
   "projects": {
-    "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Bookstore.csproj": {
+    "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Bookstore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Bookstore.csproj",
+        "projectUniqueName": "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Bookstore.csproj",
         "projectName": "Bookstore",
-        "projectPath": "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Bookstore.csproj",
+        "projectPath": "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Bookstore.csproj",
         "packagesPath": "/Users/alexisjane/.nuget/packages/",
-        "outputPath": "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/obj/",
+        "outputPath": "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alexisjane/.nuget/NuGet/NuGet.Config"
@@ -41,6 +41,10 @@
             "Font.Awesome": {
               "target": "Package",
               "version": "[5.15.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.22, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

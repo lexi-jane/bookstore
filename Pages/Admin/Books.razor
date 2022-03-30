@@ -2,17 +2,23 @@
 @page "/admin"
 @inherits OwningComponentBase<IBookstoreRepository>
 
-<table class="table table-sm table-striped table-bordered">
+<table class="table table-sm table-striped table-bordered table-hover">
 
     <thead>
-        <tr>
+        <tr class="table-dark">
             <th>Book ID</th>
             <th>Title</th>
-            <th>Title</th>
-            <th>Title</th>
-            <th>Title</th>
-            <th>Title</th>
-            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>ISBN</th>
+            <th>Classification</th>
+            <th>Category</th>
+            <th>Page Count</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
+            <th></th>
+
 
         </tr>
     </thead>
@@ -27,16 +33,21 @@
         <tr>
             <td>@b.BookId</td>
             <td>@b.Title</td>
-            <td>@b.BookId</td>
+            <td>@b.Author</td>
+            <td>@b.Publisher</td>
+            <td>@b.Isbn</td>
+            <td>@b.Classification</td>
+            <td>@b.Category</td>
+            <td>@b.PageCount</td>
+            <td>$@b.Price</td>
 
             <td>
                 <NavLink class="btn btn-info btn-sm" href="@GetDetailsUrl(b.BookId)">Details</NavLink>
-            </td>
 
+            </td>
             <td>
                 <NavLink class="btn btn-warning btn-sm" href="@GetEditUrl(b.BookId)">Edit</NavLink>
             </td>
-
             <td>
                 <button class="btn btn-danger btn-sm" @onclick="@(x => RemoveBook(b))">Delete</button>
             </td>
@@ -72,7 +83,7 @@
         BookData = await repo.Books.ToListAsync();
     }
 
-    public string GetDetailsUrl(long id) => $"/admin/boooks/details/{id}";
+    public string GetDetailsUrl(long id) => $"/admin/books/details/{id}";
     public string GetEditUrl(long id) => $"/admin/books/edit/{id}";
 
     public async Task RemoveBook (Models.Book b)

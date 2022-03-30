@@ -12,42 +12,42 @@ namespace Bookstore.Pages.Admin
     using System.Linq;
     using System.Threading.Tasks;
 #nullable restore
-#line 1 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 1 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 2 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 3 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 4 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 5 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.EntityFrameworkCore;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 7 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Bookstore.Models;
 
 #line default
@@ -62,7 +62,7 @@ using Bookstore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/Checkouts.razor"
+#line 21 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/Checkouts.razor"
        
     public ICheckoutRepository repo => Service;
 

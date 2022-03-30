@@ -27,6 +27,9 @@
     <None Remove="Views\Shared\Components\CartSummary\" />
     <None Remove="Pages\Admin\" />
     <None Remove="Migrations\" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Mission11\" />
+    <None Remove="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -46,6 +49,8 @@
     <Folder Include="Views\Shared\Components\CartSummary\" />
     <Folder Include="Pages\Admin\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Mission11\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
@@ -63,6 +68,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.22" />
     <PackageReference Include="bootstrap" Version="5.1.3" />
     <PackageReference Include="Font.Awesome" Version="5.15.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.22" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\.nuget\packages\bootstrap\5.1.3\contentFiles\any\any\wwwroot\css\bootstrap.min.css" Condition="Exists('$(NuGetPackageRoot)bootstrap/5.1.3/contentFiles/any/any/wwwroot/css/bootstrap.min.css')">

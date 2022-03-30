@@ -1,4 +1,13 @@
-﻿@page "/admin"
+﻿@*Mission 11 Bootstrap Additions:
+    - Hoverable table in admin book table (table-hover)
+    - Changed color of admin book table head (table-dark)
+*@
+
+@page "/admin"
+
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
 @model Bookstore.Pages.Admin.IndexModel
 @{
 }
@@ -7,16 +16,15 @@
 
 <html>
 
-    <head>
-        <title>Bookstore Admin</title>
-        <link href="~/css/bootstrap.min.css" rel="stylesheet"/>
-        <base href="/"/>
-    </head>
+<head>
+    <title>Bookstore Admin</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <base href="/" />
+</head>
 
-    <body>
-        <component type="typeof(Bookstore.Pages.Admin.Routed)" render-mode="ServerPrerendered" />
-        <script src="/_framework/blazor.server.js"></script>
-        <p>Hola muchacho</p>
-    </body>
+<body>
+    <component type="typeof(Bookstore.Pages.Admin.Routed)" render-mode="ServerPrerendered" />
+    <script src="/_framework/blazor.server.js"></script>
+</body>
 
 </html>

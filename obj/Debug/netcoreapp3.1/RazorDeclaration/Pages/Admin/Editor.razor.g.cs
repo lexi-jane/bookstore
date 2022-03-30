@@ -12,42 +12,42 @@ namespace Bookstore.Pages.Admin
     using System.Linq;
     using System.Threading.Tasks;
 #nullable restore
-#line 1 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 1 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 2 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 3 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 4 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 5 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Microsoft.EntityFrameworkCore;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/_Imports.razor"
+#line 7 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/_Imports.razor"
 using Bookstore.Models;
 
 #line default
@@ -63,13 +63,13 @@ using Bookstore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 79 "/Users/alexisjane/BYU/IS Core/IS 413/mission8/Bookstore/Pages/Admin/Editor.razor"
+#line 79 "/Users/alexisjane/BYU/IS Core/IS 413/bookstore-mission10/Pages/Admin/Editor.razor"
        
 
     [Parameter]
-    public long Id { get; set; } = 0;
-    public string ThemeColor => Id == 0 ? "primary" : "warning";
-    public string TitleText => Id == 0 ? "Create" : "Edit";
+    public long id { get; set; } = 0;
+    public string ThemeColor => id == 0 ? "primary" : "warning";
+    public string TitleText => id == 0 ? "Create" : "Edit";
 
     public Book b { get; set; } = new Book();
 
@@ -77,15 +77,15 @@ using Bookstore.Models;
 
     protected override void OnParametersSet()
     {
-        if (Id != 0) // existing project
+        if (id != 0) // existing project
         {
-            b = repo.Books.FirstOrDefault(x => x.BookId == Id);
+            b = repo.Books.FirstOrDefault(x => x.BookId == id);
         }
     }
 
     public void SaveBook()
     {
-        if (Id == 0) //New Project
+        if (id == 0) //New Project
         {
             repo.CreateBook(b);
         }
